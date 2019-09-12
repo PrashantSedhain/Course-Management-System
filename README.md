@@ -3,8 +3,8 @@ This program written in bash allows the user to create a new course, edit the co
 # To run the program
 Open your bash terminal and change your directory to the folder containing these files. Use the following commands:
 
-chmod u+x assign1.bash
-./assign1.bash
+  chmod u+x assign1.bash
+  ./assign1.bash
 
 The program should work.
 
