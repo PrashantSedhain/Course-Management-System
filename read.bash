@@ -1,14 +1,14 @@
-#!/usr/bash
+#!/bin/bash
 
 read -p "Enter a department code and course number: " rDepCode rCourseNum
+declare -u fDepCode=$rDepCode
+filename=$fDepCode$rCourseNum.crs
 
-filename=$rDepCode$rCourseNum.crs
 if [ ! -f data/$filename ]
 then 
 	echo ERROR: course not found
 else
 	count=0
-
 	while read a b c; do
 		if [ $count == 0 ]
 		then
@@ -16,6 +16,7 @@ else
 		elif [ $count == 1 ]
 		then 
 			echo Course number: $rCourseNum
+			echo Course name: $a $b $c
 		elif [ $count == 2 ]
 		then
 			echo Scheduled days: $a
@@ -27,8 +28,8 @@ else
 		else
 			echo Enrolled Students: $a
 		fi
-	let count+=1
-
-done < filename
+		let count+=1
+	done < data/$filename
 fi
+
 

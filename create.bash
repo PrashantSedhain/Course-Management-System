@@ -1,15 +1,15 @@
-#!/usr/bin/bash
-export read dept_code
-export read dept_name
-export read course_number
-export read course_name
-export read course_schedule
-export read course_startDate
-export read course_endDate
-export read credit_hours
-export read initial_enrollment
+#!/bin/bash
+read dept_code
+read dept_name
+read course_number
+read course_name
+read course_schedule
+read course_startDate
+read course_endDate
+read credit_hours
+read initial_enrollment
 
-declare -l depName=$dept_code
+declare -u depName=$dept_code
 fileName=$depName$course_number.crs
 
 if [ -f data/$fileName ]

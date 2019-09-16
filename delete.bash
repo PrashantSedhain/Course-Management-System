@@ -1,6 +1,8 @@
+#!/bin/bash
 read -p "Enter a course department code and number: " rDepCode rCourseNum
 
-filename=$rDepCode$rCourseNum.crs
+declare -u fDepCode=$rDepCode
+filename=$fDepCode$rCourseNum.crs
 
 count=0
 
