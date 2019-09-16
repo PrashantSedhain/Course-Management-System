@@ -12,10 +12,14 @@ read initial_enrollment
 declare -u depName=$dept_code
 fileName=$depName$course_number.crs
 
+if [ ! -d ./data ]
+then
+	mkdir data
+fi
+
 if [ -f data/$fileName ]
 then
-	echo ERROR: course already exists
-
+        echo ERROR: course already exists
 else
 	echo $dept_code $dept_name > data/$fileName
 	echo $course_name >> data/$fileName

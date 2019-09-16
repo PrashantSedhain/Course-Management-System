@@ -19,27 +19,27 @@ while [ $go ]; do
 	declare -u fselection=$selection
 	if [ "$fselection" = "C" ]
 	then
-		chmod 777 create.bash
+		chmod u+x create.bash
 		./create.bash
 	elif [ "$fselection" = "R" ]
 	then 
-		chmod 777 read.bash
+		chmod u+x read.bash
 		./read.bash
 	elif [ "$fselection" = "D" ]
 	then
-		chmod 777 delete.bash
+		chmod u+x delete.bash
 		./delete.bash
 	elif [ "$fselection" = "U" ]
 	then
-		chmod 777 update.bash
+		chmod u+x update.bash
 		./update.bash
 	elif [ "$fselection" = "T" ]
 	then
-		chmod 777 total.bash
+		chmod u+x total.bash
 		./total.bash
 	elif [ "$fselection" = "E" ]
 	then
-		chmod 777 enroll.bash
+		chmod u+x enroll.bash
 		./enroll.bash
 	else
 		echo ERROR: invalid option
